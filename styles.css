@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+/* COLORS */
+
+:root {
+  --primary: #022959;
+  --text-gray: #9699aa;
+  --text-light-purple: #abbcff;
+  --circle-bg: #bee2fd;
+  --white: #fff;
+  --purple: #483eff;
+  --border-gray: #d6d9e6;
+  --box-bg: #f8f9ff;
+}
+
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  height: 70vh;
+}
+
+button {
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--primary);
+
+  padding: 0.9375rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 0;
+}
+
+h1 {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--white);
+
+  padding-top: 0.25rem;
+}
+
+h4 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-light-purple);
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--text-gray);
+  font-weight: 700;
+}
+
+h6 span {
+  color: var(--primary);
+}
+
+p {
+  color: var(--text-gray);
+  padding-top: 0.75rem;
+}
+
+span {
+  font-size: 0.875rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+label[for="first-page"]:hover,
+label[for="second-page"]:hover,
+label[for="third-page"]:hover,
+label[for="forth-page"]:hover,
+label[for="total-yr"]:hover {
+  cursor: pointer;
+}
+
+/* UTILITY */
+.text-dark-blue {
+  color: var(--primary);
+}
+
+.text-gray {
+  color: var(--text-gray);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
+.hidden {
+  position: absolute;
+  top: -400%;
+  opacity: 0;
+}
+
+.check {
+  position: absolute;
+  opacity: 0;
+}
+
+.none {
+  display: none;
+}
+
+/* ALL PAGES */
+
+.left {
+  background-image: url(/assets/images/bg-sidebar-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 1rem 5rem 0 2rem;
+  border-radius: 0.625rem;
+
+  width: 30%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 4rem 0 2rem 0;
+
+  width: 70%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 137px;
+}
+
+.first,
+.second,
+.third,
+.forth,
+.fifth {
+  display: none;
+  width: 70%;
+  margin-inline: auto;
+}
+
+/* SIDEBAR */
+
+.left > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding-top: 2rem;
+}
+
+.circle {
+  display: grid;
+  place-items: center;
+
+  height: 2.0625rem;
+  aspect-ratio: 1/1;
+
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  color: #fff;
+}
+
+/* FIRST PAGE */
+
+form {
+  padding-top: 2.5rem;
+}
+
+form > div {
+  margin-top: 1.5rem;
+}
+
+.radio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  aspect-ratio: 1/1;
+  opacity: 0;
+}
+
+.radio:hover {
+  cursor: pointer;
+}
+
+.radio-btn {
+  position: relative;
+  text-align: end;
+  margin-top: 5.75rem;
+  margin-left: auto;
+
+  width: max-content;
+}
+
+.info {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  color: #9699aa;
+
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-gray);
+}
+
+/* SECOND PAGE */
+
+.billing {
+  margin-top: 2.5rem;
+}
+
+.boxes {
+  display: flex;
+  gap: 1.125rem;
+}
+
+.boxes > * {
+  flex: 1;
+}
+
+.box {
+  background-color: var(--box-bg);
+  border: 1px solid #d6d9e6;
+  border-radius: 0.5rem;
+  width: max-content;
+
+  padding: 1.25rem 2.1875rem 1rem 1.625rem;
+  height: 11.4375rem;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  margin-top: 2.5rem;
+}
+
+.pill {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+
+  background-color: var(--box-bg);
+  padding: 0.8125rem 0;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+}
+
+.toggle {
+  position: relative;
+
+  width: 2.375rem;
+  height: 1.25rem;
+  background-color: var(--primary);
+  border-radius: 0.625rem;
+}
+
+.toggle span {
+  position: absolute;
+  top: 4px;
+  left: 2px;
+
+  height: 0.75rem;
+  aspect-ratio: 1/1;
+
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: all 350ms ease-in-out;
+}
+
+/* THIRD PAGE */
+
+.add-ons {
+  margin-top: 2.5rem;
+}
+
+.add-ons > label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+
+  border: 1px solid var(--border-gray);
+  border-radius: 0.5rem;
+}
+
+.next,
+.previous {
+  position: relative;
+}
+
+.flex div h6 {
+  padding-top: 0.375rem;
+}
+
+/* FORTH PAGE */
+
+.paycheck {
+  background-color: var(--box-bg);
+  border-radius: 0.5rem;
+
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  margin-top: 40px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.top div h6 {
+  font-size: 0.875rem;
+  padding-top: 0.625rem;
+  text-decoration: underline;
+}
+
+.bottom > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 1rem;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1.5rem;
+}
+
+.total h2 {
+  font-size: 1.25rem;
+  color: var(--purple);
+}
+
+/* FIFTH PAGE */
+
+.fifth {
+  text-align: center;
+  margin: auto;
+}
+
+.fifth img {
+  margin-bottom: 2rem;
+}
+
+.fifth p {
+  width: 50%;
+  margin-inline: auto;
+}
+
+/* NAVIGATION */
+
+.second:has([type="checkbox"]:checked) .billing .pill > .toggle span {
+  transform: translateX(160%);
+}
+
+.second:has([type="checkbox"]:checked) .billing .boxes .box .prices h6,
+.forth:has([type="checkbox"]:checked) .paycheck .top h2,
+.forth:has([type="checkbox"]:checked) .paycheck .bottom h2,
+.forth:has([type="checkbox"]:checked) .total h6,
+.forth:has([type="checkbox"]:checked) .total h2 {
+  display: none;
+}
+
+.second:has([type="checkbox"]:checked) .billing .boxes .box .prices .none,
+.forth:has([type="checkbox"]:checked) .paycheck .top .none,
+.forth:has([type="checkbox"]:checked) .paycheck .bottom .none,
+.forth:has([type="checkbox"]:checked) .total .none {
+  display: block;
+}
+
+.third:has([value="first-check"]:checked) .add-ons > label:first-child,
+.third:has([value="second-check"]:checked) .add-ons > label:nth-child(2),
+.third:has([value="third-check"]:checked) .add-ons > label:last-child {
+  background-color: var(--box-bg);
+  border: 1px solid var(--purple);
+}
+
+.right:has([value="first"]:checked) > .first,
+.right:has([value="second"]:checked) > .second,
+.right:has([value="third"]:checked) > .third,
+.right:has([value="forth"]:checked) > .forth,
+.right:has([value="fifth"]:checked) > .fifth {
+  display: block;
+}
+
+.second:has([value="first-box"]:checked) .billing .boxes > .box.one,
+.second:has([value="second-box"]:checked) .billing .boxes > .box.two,
+.second:has([value="third-box"]:checked) .billing .boxes > .box.three {
+  border: 1px solid var(--purple);
+}
+
+body:has([value="first"]:checked) .left > div:first-child .circle,
+body:has([value="second"]:checked) .left > div:nth-child(2) .circle,
+body:has([value="third"]:checked) .left > div:nth-child(3) .circle,
+body:has([value="forth"]:checked) .left > div:last-child .circle,
+body:has([value="fifth"]:checked) .left > div:last-child .circle {
+  color: var(--primary);
+  background-color: var(--circle-bg);
+  border: 0;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 400px) {
+  body {
+    padding: 0;
+    background-color: #eff5ff;
+  }
+
+  main,
+  .boxes {
+    flex-direction: column;
+  }
+
+  h2,
+  h6 {
+    font-size: 14px;
+  }
+
+  .fs-12 {
+    font-size: 12px;
+  }
+
+  .first,
+  .second,
+  .third,
+  .forth,
+  .fifth {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: -9rem;
+    padding: 2rem;
+    background-color: var(--white);
+  }
+
+  .fifth {
+    padding-block: 5rem;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding-bottom: 7rem;
+    padding-left: 5rem;
+
+    background-image: url(/assets/images/bg-sidebar-mobile.svg);
+    border-radius: 0;
+  }
+
+  .left > div {
+    padding-top: 1rem;
+  }
+
+  .left div > div:last-child {
+    display: none;
+  }
+
+  .right,
+  .box {
+    width: 100%;
+  }
+
+  .right {
+    border-radius: 0.5rem;
+  }
+
+  .box label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .prices {
+    margin-top: 0;
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    padding: 1rem;
+  }
+
+  .radio-btn {
+    display: block;
+    width: 100%;
+  }
+  .add-ons > div {
+    padding: 1rem;
+  }
+
+  .fifth p {
+    width: 90%;
+  }
+}

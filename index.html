@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <main>
+      <!-- SIDEBAR -->
+      <div class="left">
+        <div>
+          <label for="first-page">
+            <div class="circle">
+              <span>1</span>
+            </div>
+          </label>
+          <div>
+            <h4>STEP 1</h4>
+            <h3>YOUR INFO</h3>
+          </div>
+        </div>
+        <div>
+          <label for="second-page">
+            <div class="circle">
+              <span>2</span>
+            </div>
+          </label>
+          <div>
+            <h4>STEP 2</h4>
+            <h3>SELECT PLAN</h3>
+          </div>
+        </div>
+        <div>
+          <label for="third-page">
+            <div class="circle">
+              <span>3</span>
+            </div>
+          </label>
+          <div>
+            <h4>STEP 3</h4>
+            <h3>ADD-ONS</h3>
+          </div>
+        </div>
+        <div>
+          <label for="forth-page">
+            <div class="circle">
+              <span>4</span>
+            </div>
+          </label>
+          <div>
+            <h4>STEP 4</h4>
+            <h3>SUMARY</h3>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <!-- FIRST PAGE -->
+        <div class="first">
+          <h1>Personal Info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+          <form>
+            <div>
+              <label for="text">Name</label>
+              <input class="info" type="text" placeholder="e.g. Stephen King" />
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input
+                class="info"
+                type="email"
+                placeholder="e.g. stephenking@lorem.com "
+              />
+            </div>
+            <div>
+              <label for="number">Phone Number</label>
+              <input
+                class="info"
+                type="number"
+                placeholder="e.g. +1 234 567 890 "
+              />
+            </div>
+          </form>
+          <div class="navigation radio-btn">
+            <button>Next Step</button>
+            <input
+              class="radio"
+              type="radio"
+              name="page"
+              value="second"
+              id="second-page"
+            />
+            <input
+              class="hidden"
+              type="radio"
+              name="page"
+              value="first"
+              checked
+            />
+          </div>
+        </div>
+        <!-- SECOND PAGE -->
+        <div class="second">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing</p>
+          <div class="billing">
+            <div class="boxes">
+              <div class="box one">
+                <label for="first">
+                  <img src="/assets/images/icon-arcade.svg" alt="" />
+                  <div class="prices">
+                    <h2>Arcade</h2>
+                    <h6>$9/mo</h6>
+                    <h6 class="none">$90/yr</h6>
+                    <h4 class="none text-dark-blue">2 months free</h4>
+                  </div>
+                </label>
+                <input
+                  class="check"
+                  type="radio"
+                  name="box"
+                  value="first-box"
+                  id="first"
+                />
+              </div>
+              <div class="box two">
+                <label for="second">
+                  <img src="/assets/images/icon-advanced.svg" alt="" />
+                  <div class="prices">
+                    <h2>Advanced</h2>
+                    <h6>$12/mo</h6>
+                    <h6 class="none">$120/yr</h6>
+                    <h4 class="none text-dark-blue">2 months free</h4>
+                  </div>
+                </label>
+                <input
+                  class="check"
+                  type="radio"
+                  name="box"
+                  value="second-box"
+                  id="second"
+                />
+              </div>
+              <div class="box three">
+                <label for="third">
+                  <img src="/assets/images/icon-pro.svg" alt="" />
+                  <div class="prices">
+                    <h2>Pro</h2>
+                    <h6>$15/mo</h6>
+                    <h6 class="none">$150/yr</h6>
+                    <h4 class="none text-dark-blue">2 months free</h4>
+                  </div>
+                </label>
+                <input
+                  class="check"
+                  type="radio"
+                  name="box"
+                  value="third-box"
+                  id="third"
+                />
+              </div>
+            </div>
+            <div class="pill">
+              <h6><span>Monthly</span></h6>
+              <label for="pill" class="toggle">
+                <span></span>
+              </label>
+              <input class="check" type="checkbox" id="pill" />
+              <h6>Yearly</h6>
+            </div>
+          </div>
+          <div class="navigation">
+            <div class="previous">
+              <button class="bg-white text-gray">Go Back</button>
+              <input
+                class="radio"
+                type="radio"
+                name="page"
+                value="first"
+                id="first-page"
+              />
+            </div>
+            <div class="next">
+              <button>Next Step</button>
+              <input
+                class="radio"
+                type="radio"
+                name="page"
+                value="third"
+                id="third-page"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- THIRD PAGE -->
+        <div class="third">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience</p>
+          <div class="add-ons">
+            <label>
+              <input type="checkbox" value="first-check" />
+              <div class="flex">
+                <div>
+                  <h2>Online service</h2>
+                  <h6>Access to multiplayer games</h6>
+                </div>
+                <h2 class="fs-12">+1$/mo</h2>
+              </div>
+            </label>
+            <label>
+              <input type="checkbox" value="second-check" />
+              <div class="flex">
+                <div>
+                  <h2>Larger storage</h2>
+                  <h6>Extra 1TB of cloud save</h6>
+                </div>
+                <h2 class="fs-12">+2$/mo</h2>
+              </div>
+            </label>
+            <label>
+              <input type="checkbox" value="third-check" />
+              <div class="flex">
+                <div>
+                  <h2>Customizable profile</h2>
+                  <h6>Custom theme on your profile</h6>
+                </div>
+                <h2 class="fs-12">+2$/mo</h2>
+              </div>
+            </label>
+          </div>
+          <div class="navigation">
+            <div class="previous">
+              <button class="bg-white text-gray">Go Back</button>
+              <input
+                class="radio"
+                type="radio"
+                name="page"
+                value="second"
+                id="second-page"
+              />
+            </div>
+            <div class="next">
+              <button>Next Step</button>
+              <input
+                class="radio"
+                type="radio"
+                name="page"
+                value="forth"
+                id="forth-page"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Forth page -->
+        <div class="forth">
+          <h1>Finishing up</h1>
+          <p>Double check everything looks OK before confirming</p>
+          <div class="paycheck">
+            <div class="top">
+              <div>
+                <h2>Arcade (Monthly)</h2>
+                <h2 class="none">Arcade(Yearly)</h2>
+                <label for="total-yr">
+                  <h6>Change</h6>
+                </label>
+                <input class="check" type="checkbox" id="total-yr" />
+              </div>
+              <h2>$9/mo</h2>
+              <h2 class="none">$90/yr</h2>
+            </div>
+            <div class="bottom">
+              <div>
+                <h6>Online service</h6>
+                <h2>+$1/mo</h2>
+                <h2 class="none">+$10/yr</h2>
+              </div>
+              <div>
+                <h6>Larger Storage</h6>
+                <h2>+$2/mo</h2>
+                <h2 class="none">+$20/yr</h2>
+              </div>
+            </div>
+          </div>
+          <div class="total">
+            <h6>Total (per month)</h6>
+            <h6 class="none">Total(per year)</h6>
+            <h2>+12/mo</h2>
+            <h2 class="none">+120/yr</h2>
+          </div>
+          <div class="navigation">
+            <div class="previous">
+              <button class="bg-white text-gray">Go Back</button>
+              <input
+                class="radio"
+                type="radio"
+                name="page"
+                value="third"
+                id="third-page"
+              />
+            </div>
+            <div class="next">
+              <button class="bg-purple">Confirm</button>
+              <input class="radio" type="radio" name="page" value="fifth" />
+            </div>
+          </div>
+        </div>
+        <!-- FIFTH PAGE -->
+        <div class="fifth">
+          <img src="/assets/images/icon-thank-you.svg" alt="" />
+          <h1>Thank you!</h1>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
